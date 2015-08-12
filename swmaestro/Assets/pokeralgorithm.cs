@@ -3,8 +3,8 @@ using System.Collections;
 
 public class pokeralgorithm : MonoBehaviour {
 
-	public static float cardXcha=10f;
-	public static float cardY=10f;
+	public static float cardXcha=90f;
+	public static float cardY=150f;
 	public class cardinfo
 	{
 		public int type;
@@ -51,7 +51,6 @@ public class pokeralgorithm : MonoBehaviour {
 		}
 
 
-
 	}
 
 	void allcarddisable()
@@ -93,9 +92,9 @@ public class pokeralgorithm : MonoBehaviour {
 			while(!onecarddraw(i));
 		}
 		for (int i=0; i<5; i++) {
-			card [i].gameobject.GetComponent<RectTransform>().anchoredPosition = new Vector3 ((i - 2) * cardXcha, 0 , cardY);
+			card [i].gameobject.GetComponent<RectTransform>().anchoredPosition3D = new Vector3 ((i - 2) * cardXcha,0, cardY);
 			card[i].cardchangebutton.SetActive(true);
-			card[i].cardchangebutton.GetComponent<RectTransform>().anchoredPosition=new Vector3 ((i - 2) * cardXcha,0 , cardY-2f);
+			card[i].cardchangebutton.GetComponent<RectTransform>().anchoredPosition3D=new Vector3 ((i - 2) * cardXcha,0 , cardY-20f);
 		}
 
 	}
