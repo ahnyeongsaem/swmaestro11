@@ -14,8 +14,14 @@
 *.pidb
 *.booproj
 
+
 # Unity3D generated meta files
 *.pidb.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+
+# ignore asset folder
+Board Game Items/
+TD Towers/
+WeBee3D/
