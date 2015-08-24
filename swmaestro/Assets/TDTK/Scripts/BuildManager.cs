@@ -171,7 +171,24 @@ namespace TDTK {
 			
 			if(onAddNewTowerE!=null) onAddNewTowerE(newTower);
 		}
-		
+
+		//removetower
+		public static void RemoveTower(UnitTower newTower){ instance._RemoveTower(newTower); }
+		public void _RemoveTower(UnitTower newTower)
+		{
+			if(!towerList.Contains(newTower)) return;
+
+			towerList.Remove(newTower);
+
+			AddNewSampleTower(newTower);
+			
+			for(int i=0; i<buildPlatforms.Count; i++){
+				buildPlatforms[i].availableTowerIDList.Add(newTower.prefabID);
+			}
+			
+			//if(onAddNewTowerE!=null) onAddNewTowerE(newTower);
+		}
+
 		
 		
 		
@@ -469,10 +486,16 @@ namespace TDTK {
 				
 				//register the tower to the platform
 				if(buildInfo.platform!=null) buildInfo.platform.BuildTower(buildInfo.position, towerInstance);
-				
+
+				//ays build remove(perk remove same id)
+
+
+
+
+
 				//clear the build info and indicator for build manager
 				ClearBuildPoint();
-				
+
 				return "";
 			}
 			
@@ -512,6 +535,13 @@ namespace TDTK {
 				sampleTowerList.Add(towerInstance);
 			}
 		}
+
+		//made by ays
+		public void RemoveSampleTower(UnitTower newTower){
+			UnitTower towerInstance=CreateSampleTower(newTower);
+			sampleTowerList.Remove(towerInstance);
+		}
+
 		public void AddNewSampleTower(UnitTower newTower){
 			UnitTower towerInstance=CreateSampleTower(newTower);
 			sampleTowerList.Add(towerInstance);

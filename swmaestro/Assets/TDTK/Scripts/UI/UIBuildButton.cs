@@ -99,7 +99,13 @@ namespace TDTK {
 			if(exception!="") UIGameMessage.DisplayMessage(exception);
 			
 			if(!UI.UseDragNDrop()) OnExitHoverButton(butObj);
-			
+
+			//made by ays
+
+			Debug.Log ("OnTowerButton: name is"+towerList[ID].unitName);
+
+			PerkManager.RemovePerk (towerList[ID].unitName);
+
 			Hide();
 		}
 		public void OnHoverTowerButton(GameObject butObj){

@@ -55,6 +55,7 @@ namespace TDTK {
 				if(!unavailableIDList.Contains(dbList[i].ID)){
 					Perk perk=dbList[i].Clone();
 					perkList.Add(perk);
+
 				}
 			}
 			
@@ -135,7 +136,49 @@ namespace TDTK {
 		}
 		
 		public static string PurchasePerk(Perk perk, bool useRsc=true){ return instance._PurchasePerk(perk, useRsc); }
-		
+
+
+		//made by ays and perkid chuga
+		public static string RemovePerk(string perkName)
+		{
+			return instance._RemovePerk (perkName);
+
+		}
+		//madeby ays and perkid nonstatic
+		public string _RemovePerk(string perkName)
+		{
+			Perk perk=new Perk();
+			string text = "not removed";
+			for(int i=0; i<perkList.Count; i++)
+			{ 
+				if(perkList[i].name==perkName)
+				{
+					Debug.Log("Perkmaneger : perklist i is "+i+" perkName is"+perkName+" perktype is "+perkList[i].type);
+					text=perkList[i].Removed();
+					perk=perkList[i];
+				}
+			}
+			perkPoint -= 1;
+			if(onPerkPointE!=null) onPerkPointE(perkPoint);
+
+			if(perk.type==_PerkType.NewTower){ 
+				List<UnitTower> towerList=TowerDB.Load();
+				for(int i=0; i<towerList.Count; i++){
+					if(towerList[i].prefabID==perk.itemIDList[0]){
+						//unlockedTower.Add(towerList[i]);
+						//BuildManager.AddNewTower(towerList[i]);
+						BuildManager.RemoveTower(towerList[i]);
+					}
+				}
+			}
+
+
+			return text;
+		}
+
+
+
+
 		public string _PurchasePerk(Perk perk, bool useRsc=true){
 			string text=perk.Purchase(useRsc);
 			if(text!="") return text;
@@ -159,6 +202,7 @@ namespace TDTK {
 					if(towerList[i].prefabID==perk.itemIDList[0]){
 						unlockedTower.Add(towerList[i]);
 						BuildManager.AddNewTower(towerList[i]);
+
 					}
 				}
 			}

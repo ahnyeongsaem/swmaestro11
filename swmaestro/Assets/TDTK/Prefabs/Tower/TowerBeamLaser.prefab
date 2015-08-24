@@ -385,7 +385,7 @@ MonoBehaviour:
       dodgeBuff: 0
       regenHP: 0
     rscGain: 0000000000000000
-    cost: 1400000000000000
+    cost: 0000000000000000
     buildDuration: 1
     unBuildDuration: 1
     shootObjectT: {fileID: 0}
@@ -427,7 +427,7 @@ MonoBehaviour:
   deadEffectObj: {fileID: 0}
   type: 0
   targetMode: 0
-  disableInBuildManager: 0
+  disableInBuildManager: 1
   buildingEffect: {fileID: 0}
   builtEffect: {fileID: 0}
   builtDuration: 0

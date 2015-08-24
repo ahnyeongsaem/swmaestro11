@@ -410,7 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabID: 2
   instanceID: -1
-  unitName: MGTower
+  unitName: (TopCard)MGTower
   iconSprite: {fileID: 21300000, guid: 6d18570a47ad5f34aa7f7471db1a9fda, type: 3}
   desp: A standard machine gun tower. Very high firing rate.
   subClass: 0
@@ -433,9 +433,9 @@ MonoBehaviour:
   immuneToStun: 0
   currentActiveStat: 0
   stats:
-  - damageMin: 4
-    damageMax: 5
-    cooldown: 1
+  - damageMin: 2
+    damageMax: 3
+    cooldown: 2
     clipSize: 5
     reloadDuration: 1
     range: 4
@@ -474,7 +474,7 @@ MonoBehaviour:
       dodgeBuff: 0
       regenHP: 0
     rscGain: 0000000000000000
-    cost: 1400000000000000
+    cost: 0000000000000000
     buildDuration: 1
     unBuildDuration: 1
     shootObjectT: {fileID: 0}
@@ -518,7 +518,7 @@ MonoBehaviour:
   deadEffectObj: {fileID: 0}
   type: 0
   targetMode: 0
-  disableInBuildManager: 0
+  disableInBuildManager: 1
   buildingEffect: {fileID: 0}
   builtEffect: {fileID: 0}
   builtDuration: 0

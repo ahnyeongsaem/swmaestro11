@@ -173,6 +173,7 @@ namespace TDTK {
 		public void OnItemButton(GameObject butObj){
 			for(int i=0; i<itemList.Count; i++){
 				if(butObj==itemList[i].button.rootObj){
+					Debug.Log (butObj+" "+i);
 					ClearSelection();
 					selectedID=i;
 					break;
@@ -246,6 +247,7 @@ namespace TDTK {
 		
 		
 		public void OnPurchaseButton(){
+			Debug.Log ("onPurchasebutton : selectid "+selectedID+" itemlistselectid "+itemList [selectedID].perkID + "");
 			string text=PerkManager.PurchasePerk(itemList[selectedID].perkID);
 			
 			if(text!=""){

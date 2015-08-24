@@ -420,7 +420,7 @@ MonoBehaviour:
       dodgeBuff: 0
       regenHP: 1
     rscGain: 0000000000000000
-    cost: 1400000000000000
+    cost: 0000000000000000
     buildDuration: 1
     unBuildDuration: 1
     shootObjectT: {fileID: 400000, guid: 4aaebba56598d8f4cb7846f29dbabc39, type: 2}

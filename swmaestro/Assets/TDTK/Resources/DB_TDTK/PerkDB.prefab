@@ -40,6 +40,106 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perkList:
+  - ID: 19
+    name: (TopCard)MGTower
+    icon: {fileID: 21300000, guid: 6d18570a47ad5f34aa7f7471db1a9fda, type: 3}
+    iconUnavailable: {fileID: 0}
+    iconPurchased: {fileID: 0}
+    repeatable: 0
+    purchased: 0
+    type: 0
+    cost: 0000000002000000
+    minLevel: 0
+    minWave: 0
+    minPerkPoint: 0
+    prereq: 
+    itemIDList: 02000000
+    itemID: 4
+    value: 5
+    valueAlt: 0
+    valueRscList:
+    - 0
+    - 0
+    stats:
+      damageMin: 0
+      damageMax: 6
+      cooldown: 0
+      clipSize: 0
+      reloadDuration: 0
+      range: 0
+      minRange: 0
+      aoeRadius: 0
+      hit: 0
+      dodge: 0
+      shieldBreak: 0
+      shieldPierce: 0
+      damageShieldOnly: 0
+      crit:
+        chance: 0
+        dmgMultiplier: 0
+      stun:
+        chance: 0
+        duration: 0
+      slow:
+        effectID: 0
+        duration: 1
+        slowMultiplier: .75
+      dot:
+        effectID: 0
+        duration: 0
+        interval: 0
+        value: 0
+      instantKill:
+        chance: 0
+        HPThreshold: 0
+      buff:
+        effectID: 0
+        damageBuff: 1
+        cooldownBuff: 1
+        rangeBuff: 1
+        criticalBuff: 0
+        hitBuff: 0
+        dodgeBuff: 0
+        regenHP: 1
+      rscGain: 0000000000000000
+      cost: 
+      buildDuration: 1
+      unBuildDuration: 1
+      shootObjectT: {fileID: 0}
+      shootObject: {fileID: 0}
+      useCustomDesp: 0
+      desp: 
+    effects:
+      duration: 0
+      damageMin: 0
+      damageMax: 0
+      stunChance: 0
+      slow:
+        effectID: 0
+        duration: 0
+        slowMultiplier: 0
+      dot:
+        effectID: 0
+        duration: 0
+        interval: 0
+        value: 0
+      damageBuff: 0
+      rangeBuff: 0
+      cooldownBuff: 0
+      HPGainMin: 0
+      HPGainMax: 0
+    HP: 0
+    HPRegen: 0
+    HPStagger: 0
+    shield: 0
+    shieldRegen: 0
+    shieldStagger: 0
+    buildCost: 0
+    upgradeCost: 0
+    abCost: 0
+    abCooldown: 0
+    abAOERadius: 0
+    desp: Unlock PulseLaser mk2. A more deadly upgrade from standard pulse-laser.
   - ID: 12
     name: Energy Tower Cost
     icon: {fileID: 21300000, guid: 6d18570a47ad5f34aa7f7471db1a9fda, type: 3}
@@ -151,7 +251,7 @@ MonoBehaviour:
     type: 14
     cost: 0000000002000000
     minLevel: 0
-    minWave: 2
+    minWave: 0
     minPerkPoint: 0
     prereq: 0c000000
     itemIDList: 020000000000000009000000ffffffff
@@ -251,7 +351,7 @@ MonoBehaviour:
     type: 0
     cost: 0000000002000000
     minLevel: 0
-    minWave: 2
+    minWave: 0
     minPerkPoint: 0
     prereq: 0d000000
     itemIDList: 0a000000

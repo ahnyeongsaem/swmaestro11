@@ -241,7 +241,17 @@ namespace TDTK {
 			
 			return "";
 		}
-		
+		//ays sujeng
+		public string Removed(){
+			Debug.Log ("Remove() : purchased past is " + purchased+" "+ name);
+			if (!purchased)
+				return "Not Purchased";
+
+			purchased = false;
+			Debug.Log ("Remove() : purchased now is " + purchased +" "+ name);
+			return "";
+		}
+
 		public List<int> GetCost(){ return cost; }
 		
 	}
