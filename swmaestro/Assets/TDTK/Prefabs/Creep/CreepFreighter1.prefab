@@ -323,7 +323,7 @@ MonoBehaviour:
   subClass: 0
   unitC: {fileID: 0}
   unitT: {fileID: 0}
-  defaultHP: 20
+  defaultHP: 50
   fullHP: 10
   HP: 10
   HPRegenRate: 0
