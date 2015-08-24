@@ -328,7 +328,7 @@ MonoBehaviour:
   HP: 10
   HPRegenRate: 0
   HPStaggerDuration: 10
-  defaultShield: 0
+  defaultShield: 10
   fullShield: 0
   shield: 0
   shieldRegenRate: 1

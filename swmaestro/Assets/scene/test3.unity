@@ -12725,7 +12725,6 @@ GameObject:
   - 222: {fileID: 544354161}
   - 114: {fileID: 544354160}
   - 114: {fileID: 544354159}
-  - 114: {fileID: 544354162}
   m_Layer: 5
   m_Name: ButtonNextLevel
   m_TagString: Untagged
@@ -12791,8 +12790,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 544354162}
-        m_MethodName: contineumenu
+      - m_Target: {fileID: 1551743215}
+        m_MethodName: OnContinueButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12831,17 +12830,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 544354157}
---- !u!114 &544354162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 544354157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fce658f02db759348b91d77d41715efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &545556274
 GameObject:
   m_ObjectHideFlags: 0
@@ -17114,6 +17102,8 @@ Transform:
   - {fileID: 1430804601}
   - {fileID: 1963045426}
   - {fileID: 777311803}
+  - {fileID: 1702551594}
+  - {fileID: 1784744811}
   m_Father: {fileID: 1177072210}
   m_RootOrder: 3
 --- !u!114 &759881371
@@ -17130,6 +17120,8 @@ MonoBehaviour:
   wpList:
   - {fileID: 776399336}
   - {fileID: 1430804601}
+  - {fileID: 1702551594}
+  - {fileID: 1784744811}
   createPathLine: 1
   dynamicOffset: 1
   loop: 0
@@ -17621,7 +17613,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 776399335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalPosition: {x: -6.76999998, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 759881370}
@@ -29559,7 +29551,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 44, y: 22.5}
+  m_AnchoredPosition: {x: 59, y: 31}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1242668927
@@ -34136,7 +34128,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430804600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 6.05999994, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 759881370}
@@ -40897,6 +40889,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1702551593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1702551594}
+  m_Layer: 0
+  m_Name: waypoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1702551594
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1702551593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.05999994, y: 0, z: 4.67000008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 759881370}
+  m_RootOrder: 4
 --- !u!1 &1702575587
 GameObject:
   m_ObjectHideFlags: 0
@@ -42343,13 +42362,13 @@ MonoBehaviour:
   - waveID: 0
     subWaveList:
     - unit: {fileID: 100002, guid: 5830a3039683ba34e901186e5592427d, type: 2}
-      count: 7
-      interval: 2
+      count: 6
+      interval: 2.00400758
       delay: 0
       path: {fileID: 759881371}
       overrideHP: 20
       overrideShield: 0
-      overrideMoveSpd: 2.01144624
+      overrideMoveSpd: 2.33955336
       overrideLifeCost: -1
       overrideScoreCost: -1
       overrideValue: 
@@ -42358,59 +42377,22 @@ MonoBehaviour:
     lifeGain: 0
     energyGain: 0
     scoreGain: 100
-    rscGainList: 090000000c000000
+    rscGainList: 080000000c000000
     activeUnitCount: 0
     spawned: 0
     cleared: 0
-    duration: 19.2918568
+    duration: 15.2455835
     subWaveSpawnedCount: 0
   - waveID: 1
     subWaveList:
-    - unit: {fileID: 100002, guid: 5830a3039683ba34e901186e5592427d, type: 2}
-      count: 6
-      interval: 3
-      delay: 0
-      path: {fileID: 759881371}
-      overrideHP: 20
-      overrideShield: 0
-      overrideMoveSpd: 3.05502605
-      overrideLifeCost: -1
-      overrideScoreCost: -1
-      overrideValue: 
-      overrideValueMin: 
-      overrideValueMax: 
-    - unit: {fileID: 100010, guid: 2c54305cd787a2345ae4b943fd696a98, type: 2}
-      count: 3
-      interval: 3
-      delay: 2
-      path: {fileID: 759881371}
-      overrideHP: 50
-      overrideShield: 10
-      overrideMoveSpd: 1.5
-      overrideLifeCost: -1
-      overrideScoreCost: -1
-      overrideValue: 
-      overrideValueMin: 
-      overrideValueMax: 
-    lifeGain: 0
-    energyGain: 0
-    scoreGain: 100
-    rscGainList: 0c0000000d000000
-    activeUnitCount: 0
-    spawned: 0
-    cleared: 0
-    duration: 21.4734192
-    subWaveSpawnedCount: 0
-  - waveID: 2
-    subWaveList:
-    - unit: {fileID: 100004, guid: b67fe005069317a408bafe8ace5aa1d9, type: 2}
+    - unit: {fileID: 100010, guid: b66b57e28e3bb6f41aa9ce1c975228b4, type: 2}
       count: 4
-      interval: 3.95244002
+      interval: 2.82938504
       delay: 0
       path: {fileID: 759881371}
-      overrideHP: 15
-      overrideShield: 5
-      overrideMoveSpd: 2
+      overrideHP: 100
+      overrideShield: 10
+      overrideMoveSpd: 3.18666458
       overrideLifeCost: -1
       overrideScoreCost: -1
       overrideValue: 
@@ -42418,12 +42400,12 @@ MonoBehaviour:
       overrideValueMax: 
     - unit: {fileID: 100002, guid: 5830a3039683ba34e901186e5592427d, type: 2}
       count: 7
-      interval: 4.10997963
-      delay: 2.02767062
+      interval: 2.82938504
+      delay: 0
       path: {fileID: 759881371}
       overrideHP: 20
       overrideShield: 0
-      overrideMoveSpd: 2
+      overrideMoveSpd: 3.18666458
       overrideLifeCost: -1
       overrideScoreCost: -1
       overrideValue: 
@@ -42432,11 +42414,11 @@ MonoBehaviour:
     lifeGain: 0
     energyGain: 0
     scoreGain: 100
-    rscGainList: 0e0000000a000000
+    rscGainList: 090000000b000000
     activeUnitCount: 0
     spawned: 0
     cleared: 0
-    duration: 29.1317978
+    duration: 24.2060261
     subWaveSpawnedCount: 0
   waveGenerator:
     subWaveCount:
@@ -43379,6 +43361,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1784637163}
+--- !u!1 &1784744810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1784744811}
+  m_Layer: 0
+  m_Name: waypoint4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1784744811
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784744810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.0999999, y: 0, z: 4.67000008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 759881370}
+  m_RootOrder: 5
 --- !u!1 &1786294096
 GameObject:
   m_ObjectHideFlags: 0
